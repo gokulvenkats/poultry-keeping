@@ -1,0 +1,56 @@
+<form class="space-y-4" [formGroup]="birdsForm">
+  <div class="flex flex-wrap">
+    <div class="w-full">
+      <label class="form-label">Batch Name</label>
+      <input class="form-textbox" type="text" formControlName="batchName" placeholder="Batch Name">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Sales Date</label>
+      <input class="form-textbox" type="text" formControlName="salesDate" placeholder="Sales Date">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Total Culls</label>
+      <input class="form-textbox" type="text" formControlName="totalCulls" placeholder="Total Culls">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Watered</label>
+      <!-- yes/no -->
+      <input class="form-textbox" type="text" formControlName="watered" placeholder="Watered">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Total Weight</label>
+      <!-- Weigh bridge weight- (Total Culls*0.04 gms) -->
+      <input class="form-textbox" type="text" formControlName="totalWeight" placeholder="Total Weight">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Culls Rate per Kg</label>
+      <input class="form-textbox" type="text" formControlName="cullsRateperKg" placeholder="Culls Rate per Kg ">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Broker Name</label>
+      <input class="form-textbox" type="text" formControlName="brokerName" placeholder="Broker Name">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Average Weight</label>
+      <!-- Total Weight/Total Culis -->
+      <input class="form-textbox" type="text" formControlName="averageWeight" placeholder="Average Weight">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Net Cost</label>
+      <!-- if Avg Weight >= 1.500kg, Culls Rate per Kg Total Weight eise Culls Rate per Kg - 5 rupee Total Weight -->
+      <input class="form-textbox" type="text" formControlName="netCost" placeholder="Net Cost">
+    </div>
+  </div>
+
+  <div class="text-center py-4">
+    <button type="button" class="btn-primary" (click)="save()">Save</button>
+  </div>
+</form>

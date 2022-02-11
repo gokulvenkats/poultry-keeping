@@ -1,0 +1,34 @@
+<form class="space-y-4" [formGroup]="vaccineForm">
+  <div class="flex flex-wrap">
+    <div class="w-full">
+      <label class="form-label">Batch number</label>
+      <input class="form-textbox" type="text" formControlName="batchName" placeholder="BatchName">
+    </div>
+  </div>
+
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">DAys since hatch</label>
+      <input class="form-textbox" type="text" formControlName="daysSinceHatch" placeholder="Days Since Hatch">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Day/Week</label>
+      <input class="form-textbox" type="text" formControlName="dayWeek" placeholder="Day/Week">
+    </div>
+  </div>
+
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Vaccine Name</label>
+      <input class="form-textbox" type="text" formControlName="vaccineName" placeholder="Vaccine Name">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Company Name</label>
+      <input class="form-textbox" type="text" formControlName="companyName" placeholder="Company Name">
+    </div>
+  </div>
+
+  <div class="text-center py-4">
+    <button type="button" class="btn-primary" (click)="save()">Save</button>
+  </div>
+</form>

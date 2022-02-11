@@ -1,0 +1,73 @@
+<form class="space-y-4" [formGroup]="eggsForm">
+
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Egg Type</label>
+      <!-- Pullet < 40gms, Export 40-45gms, Medium 46-50gms, Correct Size 51-54gms, White Large 55gms -->
+      <input class="form-textbox" type="text" formControlName="eggType" placeholder="Egg Type">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Sales Date</label>
+      <input class="form-textbox" type="text" formControlName="salesDate" placeholder="Sales Date">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Tray Counts</label>
+      <input class="form-textbox" type="text" formControlName="trayCounts" placeholder="Tray Counts">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Egg price</label>
+      <!-- auto populate from history or manually enter -->
+      <input class="form-textbox" type="text" formControlName="eggPrice" placeholder="Egg Price">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Total Eggs</label>
+      <!-- (Tray Counts * 30)  -->
+      <input class="form-textbox" type="text" formControlName="totalEggs" placeholder="Total Eggs">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Price on Sales</label>
+      <!-- (Auto get from NECC site Namakkal) (https://www.e2necc.com/home/eggprice)  -->
+      <input class="form-textbox" type="text" formControlName="priceOnSales"
+        placeholder="Price on Sales Date per egg">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Broker Name</label>
+      <input class="form-textbox" type="text" formControlName="brokerName" placeholder="Broker Name">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Broker Commission</label>
+      <!-- (decimal in paise per egg) -->
+      <input class="form-textbox" type="text" formControlName="brokerCommission" placeholder="Broker Commission">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Market Minus</label>
+      <input class="form-textbox" type="text" formControlName="marketMinus" placeholder="Market Minus">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Total Minus</label>
+      <!-- (Broker Commission + Market Minus)  -->
+      <input class="form-textbox" type="text" formControlName="totalMinus" placeholder="Total Minus">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Total Net Cost</label>
+      <!-- (Total Eggs * Price on Sales Date - Total Minus) -->
+      <input class="form-textbox" type="text" formControlName="totalNetCost" placeholder="Total Net Cost">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+    </div>
+  </div>
+
+  <div class="text-center py-4">
+    <button type="button" class="btn-primary" (click)="save()">Save</button>
+  </div>
+</form>

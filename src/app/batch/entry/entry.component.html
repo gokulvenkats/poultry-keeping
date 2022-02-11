@@ -1,0 +1,60 @@
+<form class="space-y-4" [formGroup]="batchForm">
+  <!-- Auto Gen from delivery date and variety name Eg:yyyymmdd_varietyname_shedname/number -->
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Shed Name</label>
+      <input class="form-textbox" type="text" formControlName="shedName" placeholder="Shed Name">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Chick Variety</label>
+      <!-- auto populate from history or manually enter -->
+      <input class="form-textbox" type="text" formControlName="chickVariety" placeholder="Chick Variety">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Birth Date</label>
+      <input class="form-textbox" type="text" formControlName="birthDate" placeholder="Birth Date">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Delivery Date</label>
+      <input class="form-textbox" type="text" formControlName="deliveryDate" placeholder="Delivery Date">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Vendor Name</label>
+      <input class="form-textbox" type="text" formControlName="vendorName" placeholder="Vendor Name">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Free chick count</label>
+      <input class="form-textbox" type="text" formControlName="freeChickCount" placeholder="Free Chick Count">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Paid for chick</label>
+      <input class="form-textbox" type="text" formControlName="paidForChicks" placeholder="Paid For Chicks">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Cost per chick</label>
+      <input class="form-textbox" type="text" formControlName="costPerChick" placeholder="Cost Per Chick">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Total Quantity</label>
+      <!-- auto sum Paid Chick + Free Chick -->
+      <input class="form-textbox" type="text" formControlName="totalQuantity" placeholder="Total Quantity">
+    </div>
+    <div class="w-full px-2 md:w-1/2">
+      <label class="form-label">Total Batch Cost</label>
+      <!-- auto product of Paid Chick Cost per Chick -->
+      <input class="form-textbox" type="text" formControlName="totalBatchCost" placeholder="Total Batch Cost">
+    </div>
+  </div>
+
+  <div class="text-center py-4">
+    <button type="button" class="btn-primary" (click)="save()">Save</button>
+  </div>
+</form>
